@@ -49,10 +49,14 @@ const callCodec = Struct({
   ),
 })
 
-export async function getTx(nBytesTarget = 64_000_000) {
-  const nCalls = Math.floor(nBytesTarget / 100)
-  const remark =
-    "This is a test is just a test... Trying to get 98 bytes out of this. So, we need a bit more text"
+const REMARK_CALL_SIZE = 1_000
+const remark = Array(REMARK_CALL_SIZE - 4)
+  .fill(null)
+  .map(() => "a")
+  .join("")
+
+export async function getTx(nBytesTarget: number) {
+  const nCalls = Math.floor(nBytesTarget / REMARK_CALL_SIZE)
 
   const callData = callCodec.enc({
     module: 16,

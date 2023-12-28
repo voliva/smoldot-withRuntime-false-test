@@ -4,8 +4,7 @@ import { getTx } from "./get-tx"
 
 console.log("creating transaction")
 
-const tx = await getTx(1_500_000)
-// const tx = await getTx()
+const tx = await getTx(1_200_000)
 
 console.log("transaction created, sending it...")
 
