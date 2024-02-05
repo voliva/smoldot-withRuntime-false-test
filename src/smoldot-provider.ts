@@ -1,5 +1,5 @@
 import { start } from "smoldot"
-import chainSpec from "./westend-spec"
+import chainSpec from "./polkadot-spec"
 import { getSyncProvider } from "@polkadot-api/json-rpc-provider-proxy"
 import { appendFileSync, existsSync, rmSync } from "fs"
 import { getTickDate } from "./tick-date"
