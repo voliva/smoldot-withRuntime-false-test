@@ -9,5 +9,4 @@ examples/*/dist/**
 .vscode
 .pnpm-store
 build
-wire-logs.txt
-smoldot-logs.txt
+*-logs.txt
